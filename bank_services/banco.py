@@ -1,4 +1,5 @@
 from bank_services.conta import Conta
+from bank_services.conta_poupanca import ContaPoupanca
 import random
 
 class Banco:
@@ -47,7 +48,12 @@ class Banco:
 
   def criar_conta(self):
     numero = random.randint(1000, 9999)
-    conta = Conta(numero)
+    account_type = input("Digite o tipo de conta (1 - Conta Corrente, 2 - Conta Poupança): ").strip()
+    conta = None
+    if account_type == "1":
+      conta = Conta(numero)
+    else:
+      conta = ContaPoupanca(numero)
     self.cadastrar(conta)
     print(f"Conta criada com sucesso. Número da conta: {numero}")
 

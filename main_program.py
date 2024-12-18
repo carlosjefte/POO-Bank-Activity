@@ -39,7 +39,7 @@ class Cidade:
           number = int(input("Digite o número da conta: ").strip())
           self.bank.debitar(number, amount)
         case "4":
-          number = input("Digite o número da conta: ")
+          number = int(input("Digite o número da conta: "))
           self.bank.saldo(number)
         case "5":
           origin = int(input("Digite o número da conta de origem: ").strip())

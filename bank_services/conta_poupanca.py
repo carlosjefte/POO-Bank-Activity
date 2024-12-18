@@ -5,4 +5,8 @@ class ContaPoupanca(Conta):
     super().__init__(numero)
 
   def render_juros(self, taxa):
-    self.creditar(self.ver_saldo() * taxa)
+    self.creditar(self.saldo * taxa)
+
+  def ver_saldo(self):
+    self.render_juros(0.1)
+    return self.saldo

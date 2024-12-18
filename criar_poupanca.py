@@ -12,7 +12,6 @@ class VerificaPoupanca:
       conta.debitar(45.00)
 
     if isinstance(conta, ContaPoupanca):
-      conta.render_juros(0.1)
       print(f"Saldo com juros: {conta.ver_saldo():.2f}")
 
 VerificaPoupanca()
